@@ -1,5 +1,10 @@
 import os
 import sys
+from tensorflow.python.util import deprecation
+import tensorflow as tf
+
+os.environ["TF_USE_LEGACY_KERAS"]='1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 
 # Suppress as many warnings as possible
 # os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
@@ -7,12 +12,17 @@ import sys
 # deprecation._PRINT_DEPRECATION_WARNINGS = False
 # import tensorflow as tf
 # tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+# Suppress warnings and deprecation messages
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+deprecation._PRINT_DEPRECATION_WARNINGS = False
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+
 
 from ckiptagger import data_utils, construct_dictionary, WS, POS, NER
 
 def main():
     # Download data
-    data_utils.download_data("./")
+    # data_utils.download_data("./")
     
     # Load model without GPU
     ws = WS("./data")
