@@ -1,0 +1,4 @@
+https://medium.com/tkustatdc/nlp-自然語言處理-02-文本前處理-ckip中文斷詞-e7db5c147bef
+
+https://github.com/ckiplab/ckiptagger
+
