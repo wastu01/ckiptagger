@@ -1,4 +1,22 @@
 # CkipTagger
+
+## Installation Notes for Mac M1
+
+For M1 MacOS users, follow these steps before installing CkipTagger:
+
+1. Install TensorFlow with Metal support following [Apple's official guide](https://developer.apple.com/metal/tensorflow-plugin/).
+2. Install `tf_keras` separately.
+3. Set the environment variable: `TF_USE_LEGACY_KERAS=1`.
+4. Install the correct `tensorflow-metal` version matching your TensorFlow version.
+
+this environment is working for me:
+`tensorflow 2.16.2`  `tf_keras 2.16.0`  `tensorflow-metal 1.1.0`
+
+Check version compatibility:
+- [tensorflow-metal on PyPI](https://pypi.org/project/tensorflow-metal)
+- [tensorflow-metal files](https://pypi.org/project/tensorflow-metal/#files)
+
+
 Also: [中文 README](https://github.com/ckiplab/ckiptagger/wiki/Chinese-README)
 
 #### [GitHub](https://github.com/ckiplab/ckiptagger)
