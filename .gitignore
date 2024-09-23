@@ -4,3 +4,4 @@ CKIP CoreNLP.pdf
 data.zip
 /data
 pytorch_model.bin
+/.venv
